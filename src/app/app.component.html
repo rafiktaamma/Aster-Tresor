@@ -1,0 +1,93 @@
+
+
+<nav class="navbar navbar-expand-md  py-md-2 py-lg-3 mb-1 fixed-top  " (scroll)="onWindowScroll($event);" id="nav1">
+    <!--logo-->
+
+
+  <a class="navbar-brand" href="#">
+    <img id="logo" class="d-inline-block mr-1 " height="30vh" alt="Logo" src="./assets/img/logo.jpg">
+
+  </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" pageScroll pageScrollDuration="800"   href="#About_id">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trouver un doucment </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contribution </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <section  class="d-flex container" id="logo_home" >
+    <div class="container d-flex align-self-center  Acceuil "   >
+      <div class="row   align-self-center justify-content-center mx-auto " >
+        <div class="col  " >
+          <h1 class="Acceuil-title">Asterism Tresor</h1>
+          <blockquote class="blockquote">
+            <p class=" text-center"><span>&#8220;</span> Le savoir , c'est le pouvoir <span>&#8221;</span></p>
+           <!-- <footer class="blockquote-footer">Dan Abnett  <cite title="Titanicus">Titanicus</cite></footer>-->
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+<section id="About_id" >
+  <div class="container About"  >
+    <div class="row">
+      <div class="col-9 mx-0 px-0">
+         <p class="About_title">About</p>
+         <p class="About_Description">“Asterism Tresor” est une bibliothèque de cours, d'exercices, d'examens et de plusieurs autres documents destinés à tous les étudiants de l'universite de Saida Dr. Moulay Tahar.
+          <br> "Asterism Tresor" a été créé en Novembre 2019 en collaboration avec le club scientifique "Asterism"</p>
+      </div>
+      <div class="col-3 image_container">
+        <img src="./assets/img/student.svg" alt="student"  class="img_container">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!--<div class="container" style="height: 500px;background-color: aliceblue"></div>-->
+<!--<div class="container" style="height: 500px;background-color: blue"></div>-->
+<!--<div class="container" style="height: 500px;background-color: red"></div>-->
+
+<div class="container center ">
+<ejs-filemanager id='default-filemanager'  [allowMultiSelection]='allowMultiSelection' [toolbarSettings]='toolbarSettings' [ajaxSettings]='ajaxSettings' [contextMenuSettings]='contextMenuSettings' style="background-color: white;width:80%">
+</ejs-filemanager>
+
+</div>
+
+<div class="container" style="height: 250px"></div>
+<!--<section id="Doc_id">-->
+<!--    <div class="container Document_Container">-->
+<!--      <p class="Doc_title">Trouver un document</p>-->
+<!--      <h4>Basic mat-select</h4>-->
+<!--      <mat-form-field>-->
+<!--        <mat-label>Favorite food</mat-label>-->
+<!--        <mat-select>-->
+<!--          <mat-option *ngFor="let food of foods" [value]="food.value">-->
+<!--            {{food.viewValue}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+
+
+
+<!--  </div>-->
+<!--</section>-->
