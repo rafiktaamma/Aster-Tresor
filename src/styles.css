@@ -12,23 +12,25 @@ body {
   background-color: #2b3536 !important;
   background-image: url("src/assets/img/background.png") ;
   background-size: 100% ;
+
   color: white !important;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 
 
-html, body { height: 100%; }
-
-@media (max-width: 768px) {
-  ul .nav-item{
 
 
- }
-   a{
-    width: fit-content !important;
-    font-size: 3.5vw !important;
 
- }
+/*@media (max-width: 768px) {*/
+/*  ul .nav-item{*/
 
-}
+
+/* }*/
+/*   a{*/
+/*    width: fit-content !important;*/
+/*    font-size: 3.5vw !important;*/
+
+/* }*/
+
+/*}*/

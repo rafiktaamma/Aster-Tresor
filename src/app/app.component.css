@@ -1,25 +1,37 @@
+/*#logo{*/
+/* background-image:url("src/assets/img/logo.jpg") ;*/
+/*  background-size:contain ;*/
+/*}*/
+.show.navbar-collapse{
+  background-color: #2b3536;
+}
+.show .navbar-nav {
+  height: 100vh !important;
+  width: 100% !important;
+
+}
+
+@media (max-width: 767.98px) {
+  .nav-item .nav-link  {
+    font-size: 4vw !important;
+  }
+  .nav-item{
+    width: 100% !important;
+  }
+}
 
 .nav-item .nav-link  {
- color: #FAD67F;
-  font-family: 'Righteous', cursive;
-  font-size: 1.3vw ;
+color: #FAD67F;
+font-family: 'Righteous', cursive;
+font-size: 1.3vw ;
 }
-.navbar-collapse ul {
-  align-items: center;
-}
+
 
 .navbar-toggler-icon {
 
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(250,214,127)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
 }
-/*.navbar-collapse .nav-item{*/
-/*  width: 100%;*/
-/*}*/
-
-/*.navbar-collapse  {*/
-/*  width: 100%;*/
-/*}*/
 
 
 .nav-item {
@@ -47,47 +59,56 @@ nav{
 
 }
 
+/* Home CSS */
 #logo_home{
-  margin-top: 20%;
-  padding: 0;
+  margin-top: 40vh;
   background: rgba(43,53,54,0.97);
-  height: fit-content;
-  width: fit-content;
+ /* height: fit-content;
+  width: fit-content;*/
+}
+.border-asterism{
+  border: solid 1px #FAD67F;
 }
 
 .Acceuil-title{
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 0.25em;
-   font-size: 5vw;
+  line-height: 1.7;
+  transform: scale(.7, 1.4);
+  font-size: calc(5vw + 16px)
 
 }
 .blockquote{
   font-family: 'Playfair Display';
 
   font-style:italic ;
-  font-size: 2vw;
+  font-size: calc(2vw + 6px);
 
 }
 
+/*  About CSS */
 
-.About_title{
-  font-family: 'News Cycle', sans-serif !important;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2vw;
-}
-.About_Description{
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 1.5vw;
-}
 #About_id{
-  margin-top:25%;
+  margin-top: 55vh !important;
   font-family: 'News Cycle', sans-serif !important;
   font-style: normal;
   font-weight: normal;
   background: rgba(43,53,54,0.7);
 }
+
+
+.About_title{
+  /*font-family: 'News Cycle', sans-serif !important;*/
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(2vw + 14px);
+}
+.About_Description{
+  font-style: normal;
+  font-weight: lighter;
+  font-size: calc(1.5vw + 6px);
+}
+
 
 
 .img_container{
@@ -96,5 +117,12 @@ nav{
 
 }
 
+#div-filemanager{
+   margin-top: 50vh;
+   width: 100%
+ }
+#default-filemanager{
+ ;
+  background-color: white;
 
-
+}

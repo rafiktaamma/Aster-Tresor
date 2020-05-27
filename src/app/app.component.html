@@ -1,28 +1,28 @@
 
 
-<nav class="navbar navbar-expand-md  py-md-2 py-lg-3 mb-1 fixed-top  " (scroll)="onWindowScroll($event);" id="nav1">
+<nav class="navbar navbar-expand-md  py-md-2 py-lg-3 mb-1 fixed-top px-0 px-md-4 mx-md-2 " (scroll)="onWindowScroll($event);" id="nav1">
     <!--logo-->
 
 
   <a class="navbar-brand" href="#">
-    <img id="logo" class="d-inline-block mr-1 " height="30vh" alt="Logo" src="./assets/img/logo.jpg">
+    <img id="logo" class="d-inline-block mr-1  " height="30vh" alt="Logo" src="./assets/img/logo.jpg">
 
   </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto ">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Accueil </a>
+      <ul class="navbar-nav ml-auto d-sm-flex flex-sm-column flex-md-row   align-items-center">
+        <li class="nav-item my-3 my-md-2 " data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link  " href="#">Accueil </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" pageScroll pageScrollDuration="800"   href="#About_id">About</a>
+        <li class="nav-item my-3 my-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="800" (pageScrollFinish)="NoShow($event)" href="#About_id">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Trouver un doucment </a>
+        <li class="nav-item  my-3 my-md-2">
+          <a class="nav-link text-nowrap" href="#">Trouver un doucment </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item my-3 my-md-2">
           <a class="nav-link" href="#">Contribution </a>
         </li>
 
@@ -31,44 +31,45 @@
 
   </nav>
 
-  <section  class="d-flex container" id="logo_home" >
-    <div class="container d-flex align-self-center  Acceuil "   >
-      <div class="row   align-self-center justify-content-center mx-auto " >
-        <div class="col  " >
-          <h1 class="Acceuil-title">Asterism Tresor</h1>
+  <section  class="container   px-3 mx-auto border-asterism" id="logo_home" >
+    <div class="container  mx-auto px-auto "   >
+
+        <div class="col mx-auto px-auto justify-content-center d-flex flex-column align-items-center " >
+          <h1 class="Acceuil-title text-nowrap ">Asterism Tresor</h1>
           <blockquote class="blockquote">
             <p class=" text-center"><span>&#8220;</span> Le savoir , c'est le pouvoir <span>&#8221;</span></p>
            <!-- <footer class="blockquote-footer">Dan Abnett  <cite title="Titanicus">Titanicus</cite></footer>-->
           </blockquote>
         </div>
-      </div>
+
     </div>
+
 
 </section>
 
 
-<section id="About_id" >
-  <div class="container About"  >
-    <div class="row">
-      <div class="col-9 mx-0 px-0">
+<section id="About_id" class="px-3 mx-auto border-asterism" >
+
+    <div class="row container   mx-auto px-auto">
+      <div class="col-8 mx-auto px-auto  col-md-9  ">
          <p class="About_title">About</p>
-         <p class="About_Description">“Asterism Tresor” est une bibliothèque de cours, d'exercices, d'examens et de plusieurs autres documents destinés à tous les étudiants de l'universite de Saida Dr. Moulay Tahar.
+         <p class="About_Description text-justify">“Asterism Tresor” est une bibliothèque de cours, d'exercices, d'examens et de plusieurs autres documents destinés à tous les étudiants de l'universite de Saida Dr. Moulay Tahar.
           <br> "Asterism Tresor" a été créé en Novembre 2019 en collaboration avec le club scientifique "Asterism"</p>
       </div>
-      <div class="col-3 image_container">
+      <div class="col-md-3 d-none d-md-block image_container">
         <img src="./assets/img/student.svg" alt="student"  class="img_container">
       </div>
 
     </div>
-  </div>
+
 
 </section>
 <!--<div class="container" style="height: 500px;background-color: aliceblue"></div>-->
 <!--<div class="container" style="height: 500px;background-color: blue"></div>-->
 <!--<div class="container" style="height: 500px;background-color: red"></div>-->
 
-<div class="container center ">
-<ejs-filemanager id='default-filemanager'  [allowMultiSelection]='allowMultiSelection' [toolbarSettings]='toolbarSettings' [ajaxSettings]='ajaxSettings' [contextMenuSettings]='contextMenuSettings' style="background-color: white;width:80%">
+<div class="container center " id="div-filemanager">
+<ejs-filemanager id='default-filemanager' [view]='view' [allowMultiSelection]='allowMultiSelection' [toolbarSettings]='toolbarSettings' [ajaxSettings]='ajaxSettings' [contextMenuSettings]='contextMenuSettings' >
 </ejs-filemanager>
 
 </div>
