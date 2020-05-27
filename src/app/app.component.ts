@@ -54,9 +54,11 @@ onWindowScroll(e) {
     element.classList.add('nav_onScroll');
     element.classList.remove('py-lg-3');
     element.classList.add('py-0');
+    element.classList.add('border-asterism');
   } else {
     element.classList.remove('nav_onScroll');
     element.classList.remove('py-0');
+    element.classList.remove('border-asterism');
     element.classList.add('py-lg-3');
   } }
   // NoShow(reachedTarget: boolean): void {

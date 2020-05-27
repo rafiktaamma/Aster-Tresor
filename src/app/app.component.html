@@ -1,11 +1,11 @@
 
-
+<div id="top"  style="position: absolute;top: 0;height: 0;width: 0"></div>
 <nav class="navbar navbar-expand-md  py-md-2 py-lg-3 mb-1 fixed-top px-0 px-md-4 mx-md-2 " (scroll)="onWindowScroll($event);" id="nav1">
     <!--logo-->
 
 
   <a class="navbar-brand" href="#">
-    <img id="logo" class="d-inline-block mr-1  " height="30vh" alt="Logo" src="./assets/img/logo.jpg">
+    <img id="logo" class="d-inline-block mr-1  " height="30vh" alt="Logo" src="./assets/img/Asterism_Logo.svg">
 
   </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,16 +14,17 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto d-sm-flex flex-sm-column flex-md-row   align-items-center">
         <li class="nav-item my-3 my-md-2 " data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link  " href="#">Accueil </a>
+          <a class="nav-link" pageScroll [pageScrollDuration]="800"  href="#top" >Accueil </a>
         </li>
         <li class="nav-item my-3 my-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="800" (pageScrollFinish)="NoShow($event)" href="#About_id">About</a>
+          <a class="nav-link" pageScroll [pageScrollOffset]="70" [pageScrollDuration]="800"  href="#About_id">About</a>
         </li>
-        <li class="nav-item  my-3 my-md-2">
-          <a class="nav-link text-nowrap" href="#">Trouver un doucment </a>
+        <li class="nav-item  my-3 my-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link text-nowrap" pageScroll [pageScrollOffset]="70" [pageScrollDuration]="800"  href="#find_doc_id">
+            Bibliothèque </a>
         </li>
-        <li class="nav-item my-3 my-md-2">
-          <a class="nav-link" href="#">Contribution </a>
+        <li class="nav-item my-3 my-md-2" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScc2QOe9Ki2UIUNzlLZOjl9_ZhAT9ge96L9-zo9_1Miwirh6Q/viewform?fbclid=IwAR1t6gZI-gRMFlikH_9MFsUvN_0VudmqgXUfmKdREh_gWIyBzjgHhWahXes">Contribution </a>
         </li>
 
       </ul>
@@ -31,7 +32,7 @@
 
   </nav>
 
-  <section  class="container   px-3 mx-auto border-asterism" id="logo_home" >
+  <section  class="container   px-3 mx-auto " id="logo_home" >
     <div class="container  mx-auto px-auto "   >
 
         <div class="col mx-auto px-auto justify-content-center d-flex flex-column align-items-center " >
@@ -48,32 +49,41 @@
 </section>
 
 
-<section id="About_id" class="px-3 mx-auto border-asterism" >
-
+<section id="About_id" class="px-3 mx-auto " >
+    <div class="row mx-auto px-auto ">
+    <p class="About_title mx-auto px-auto  ">About</p>
+    </div>
     <div class="row container   mx-auto px-auto">
-      <div class="col-8 mx-auto px-auto  col-md-9  ">
-         <p class="About_title">About</p>
-         <p class="About_Description text-justify">“Asterism Tresor” est une bibliothèque de cours, d'exercices, d'examens et de plusieurs autres documents destinés à tous les étudiants de l'universite de Saida Dr. Moulay Tahar.
+      <div class="col-8 mx-auto px-auto  col-md-8  ">
+         <!--<p class="About_title  ">About</p>-->
+         <p class="About_Description text-justify  ">“Asterism Tresor” est une bibliothèque de cours, d'exercices, d'examens et de plusieurs autres documents destinés à tous les étudiants de l'universite de Saida Dr. Moulay Tahar.
           <br> "Asterism Tresor" a été créé en Novembre 2019 en collaboration avec le club scientifique "Asterism"</p>
       </div>
-      <div class="col-md-3 d-none d-md-block image_container">
-        <img src="./assets/img/student.svg" alt="student"  class="img_container">
+      <div class="col-md-1   d-flex justify-content-center " >
+        <div class="vertical-line rounded"></div>
+      </div>
+      <div class="col-md-3  d-none d-md-block image_container">
+        <img src="./assets/img/Asterism_Tresor_Logo.svg" alt="student"  class="img_container">
       </div>
 
     </div>
 
 
-</section>
+</section >
 <!--<div class="container" style="height: 500px;background-color: aliceblue"></div>-->
 <!--<div class="container" style="height: 500px;background-color: blue"></div>-->
 <!--<div class="container" style="height: 500px;background-color: red"></div>-->
-
-<div class="container center " id="div-filemanager">
-<ejs-filemanager id='default-filemanager' [view]='view' [allowMultiSelection]='allowMultiSelection' [toolbarSettings]='toolbarSettings' [ajaxSettings]='ajaxSettings' [contextMenuSettings]='contextMenuSettings' >
+<section id="find_doc_id" class="px-3 mx-auto ">
+<div class="container mx-auto px-auto " id="div-filemanager">
+  <div class="row mx-auto px-auto ">
+    <p class="About_title mx-auto px-auto  ">Bibliothèque</p>
+  </div>
+  <div class="row mx-auto px-auto border  border-asterism">
+<ejs-filemanager id='default-filemanager'  [view]='view' [allowMultiSelection]='allowMultiSelection' [toolbarSettings]='toolbarSettings' [ajaxSettings]='ajaxSettings' [contextMenuSettings]='contextMenuSettings' >
 </ejs-filemanager>
-
+  </div>
 </div>
-
+</section>
 <div class="container" style="height: 250px"></div>
 <!--<section id="Doc_id">-->
 <!--    <div class="container Document_Container">-->
@@ -92,3 +102,58 @@
 
 <!--  </div>-->
 <!--</section>-->
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-7">
+        <h6>About</h6>
+        <p class="text-justify">Asterism Club <i>est un club scientifique créé </i> créé par des étudiants de l'Université de Saida Molay Taher, passionnés par le savoir et la recherche scientifique. </div>
+      <!--<div class="col-xs-none col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+        </ul>
+      </div>-->
+
+      <div class="col-xs-6 col-md-3 offset-md-2">
+        <h6 class="text-nowrap">Contact Website builder</h6>
+        <!--<ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">Contact </a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+
+        </ul>-->
+        <ul class="social-network social-circle mt-1">
+          <li><a href="#" class="icoFacebook" title="Facebook" href="https://www.facebook.com/Rafik.Taamma"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="icoInstagram" href="https://www.instagram.com/rafiktaamma/"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" class="icoLinkedin" title="Linkedin" href="https://www.linkedin.com/in/rafik-taamma-5b4310135/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text text-nowrap">Copyright &copy; 2020 All Rights Reserved by
+          <a href="https://www.facebook.com/Asterism.Club.20/">Asterism club</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-network social-circle">
+          <li><a class="icoFacebook" href="https://www.facebook.com/Asterism.Club.20/"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="icoInstagram" href="https://www.instagram.com/asterism_club/"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="icoLinkedin" href="https://www.linkedin.com/company/asterism-club/about/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
